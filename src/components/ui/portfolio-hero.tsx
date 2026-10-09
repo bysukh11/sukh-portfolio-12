@@ -134,9 +134,6 @@ const articles = [
     date: "2024",
     url: "https://www.cmru.ca/2024/09/20/unlock-convenience-how-university-lockers-are-a-students-best-friend/",
   },
-  {
-    
-  },
 ];
 
 export default function Component() {
