@@ -87,32 +87,43 @@ const BlurText: React.FC<BlurTextProps> = ({
 // Sample data — replace with your real work
 const videoProjects = [
   {
-    title: "Client Commercial",
-    description: "This 28-second-long video advertises Calgary's local nightclub called Dreamer's Night Club. This project was edited on Final Cut Pro.",
-    tag: "Commercial",
+    title: "Teaser: The Origins of Ghosts",
+    description: "This 60-second-long teaser showcases a documentary-style content on the Origins of Ghosts. It elaborates multiple camera angles, puts emphasis on the thriller-horror genre. This project was edited on Adobe Audition and DaVinci Resolve.",
+    tag: "Teaser",
+    url: "https://www.youtube.com/watch?v=oCKtrbpPAAs",
   },
   {
     title: "Interview: Education Student",
-    description: "12-minute narrative documentary edit, structured from 4 hours of raw interview footage.",
-    tag: "Documentary",
+    description: "An explainer video showcasing MedULingo’s A to Z Medical Literacy series and its educational resources for promoting medical literacy among children. Created for MedULingo’s YouTube channel during my role as Social Media Manager and edited using DaVinci Resolve.",
+    tag: "Explainer video",
+    url: "https://youtu.be/pCAdvCewxkU",
   },
   {
-    title: "YouTube-Style Horror video",
-    description: "3-minute multi-camera highlight edit for a live event, synced to a custom audio mix.",
-    tag: "Live Event",
+    title: "Client Commercial",
+    description: "This 28-second-long video advertises Calgary's local nightclub called Dreamer's Night Club. This project was edited on Final Cut Pro.",
+    tag: "Commercial",
+    url: "https://youtu.be/xxFeybHb_aY",
+  },
+  {
+    title: "Elder Dog Video",
+    description: "A video highlighting ElderDog, a non-profit organization that connects volunteers with seniors to help walk their dogs. Created and edited using Canva, DaVinci Resolve, and Adobe Premiere Pro.",
+    tag: "Explainer video",
+    url: "https://youtu.be/TYtbkNBaRw0",
   },
 ];
 
 const audioProjects = [
   {
-    title: "Audio Story",
-    description: "Full episode mix and master — noise reduction, leveling, and mastering for a weekly podcast.",
-    tag: "Podcast",
+    title: "Student Interview audio",
+    description: "An audio interview produced during my second year at Mount Royal University, featuring a fellow student discussing her experiences studying education. Edited using Adobe Audition.",
+    tag: "Audio Interview",
+    url: "https://youtu.be/lDL7ySh2COE",
   },
   {
-    title: "Voiceover Sound Design",
-    description: "Layered voiceover with ambient sound design for a broadcast promo spot.",
-    tag: "Broadcast",
+    title: "Tuesday Blues – Radio Show Aircheck",
+    description: "A radio aircheck created during my first year in the broadcasting program, showcasing my work on Tuesday Blues. Edited using Adobe Audition.",
+    tag: "Radio aircheck",
+    url: "https://youtu.be/0YNq9OuRI2M",
   },
 ];
 
@@ -120,17 +131,11 @@ const articles = [
   {
     title: "Unlock convenience: How university lockers are a student’s best friend",
     description: "A simple yet comprehensible material educating students on the resources available at Mount Royal University",
-    date: "2026",
+    date: "2024",
+    url: "https://www.cmru.ca/2024/09/20/unlock-convenience-how-university-lockers-are-a-students-best-friend/",
   },
   {
-    title: "Building a Sound Design Workflow From Scratch",
-    excerpt: "How I set up a repeatable process for layering ambience, foley, and dialogue in post.",
-    date: "2025",
-  },
-  {
-    title: "Notes From Broadcasting School",
-    excerpt: "Reflections on the projects and mentors that shaped how I think about storytelling.",
-    date: "2025",
+    
   },
 ];
 
