@@ -414,7 +414,7 @@ I'm a recent broadcasting graduate turning raw footage into stories that connect
               <div>
                 <span className="text-xs font-bold tracking-widest text-neutral-500">{article.date}</span>
                 <h3 className="text-xl font-bold mt-2 mb-2">{article.title}</h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{article.excerpt}</p>
+                <p className="text-neutral-500 text-sm leading-relaxed">{article.description}</p>
               </div>
             </div>
           ))}
