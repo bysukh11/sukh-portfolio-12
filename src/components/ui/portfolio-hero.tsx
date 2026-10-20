@@ -91,24 +91,28 @@ const videoProjects = [
     description: "This 60-second-long teaser showcases a documentary-style content on the Origins of Ghosts. It elaborates multiple camera angles, puts emphasis on the thriller-horror genre. This project was edited on Adobe Audition and DaVinci Resolve.",
     tag: "Teaser",
     url: "https://www.youtube.com/watch?v=oCKtrbpPAAs",
+    thumbnail: "/ghosts.png",
   },
   {
-    title: "Interview: Education Student",
+    title: "MedULingo: A to Z Medical Literacy",
     description: "An explainer video showcasing MedULingo’s A to Z Medical Literacy series and its educational resources for promoting medical literacy among children. Created for MedULingo’s YouTube channel during my role as Social Media Manager and edited using DaVinci Resolve.",
     tag: "Explainer video",
     url: "https://youtu.be/pCAdvCewxkU",
+    thumbnail: "/medulingo.png",
   },
   {
     title: "Client Commercial",
     description: "This 28-second-long video advertises Calgary's local nightclub called Dreamer's Night Club. This project was edited on Final Cut Pro.",
     tag: "Commercial",
     url: "https://youtu.be/xxFeybHb_aY",
+    thumbnail: "/dreamers.png",
   },
   {
     title: "Elder Dog Video",
     description: "A video highlighting ElderDog, a non-profit organization that connects volunteers with seniors to help walk their dogs. Created and edited using Canva, DaVinci Resolve, and Adobe Premiere Pro.",
     tag: "Explainer video",
     url: "https://youtu.be/TYtbkNBaRw0",
+    thumbnail: "/elderdog.png",
   },
 ];
 
@@ -342,23 +346,33 @@ I'm a recent broadcasting graduate turning raw footage into stories that connect
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {videoProjects.map((project) => (
-            <div
-              key={project.title}
-              className="p-6 rounded-lg border transition-colors duration-300"
+            <a
+            key={project.title}
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block p-6 rounded-lg border transition-colors duration-300 hover:opacity-80"
               style={{
                 borderColor: isDark ? "hsl(0 0% 20%)" : "hsl(0 0% 85%)",
               }}
             >
               <div
-                className="w-full aspect-video rounded-md mb-4 flex items-center justify-center"
-                style={{ backgroundColor: isDark ? "hsl(0 0% 10%)" : "hsl(0 0% 92%)" }}
-              >
-                <Play className="w-10 h-10 text-neutral-500" strokeWidth={1.5} />
-              </div>
+  className="relative w-full aspect-video rounded-md mb-4 flex items-center justify-center overflow-hidden"
+  style={{ backgroundColor: isDark ? "hsl(0 0% 10%)" : "hsl(0 0% 92%)" }}
+>
+  {project.thumbnail && (
+    <img
+      src={project.thumbnail}
+      alt={project.title}
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+  )}
+  <Play className="absolute bottom-3 right-3 w-8 h-8 text-white drop-shadow-lg" strokeWidth={1.5} />
+</div>
               <span className="text-xs font-bold tracking-widest text-neutral-500">{project.tag}</span>
               <h3 className="text-xl font-bold mt-2 mb-2">{project.title}</h3>
               <p className="text-neutral-500 text-sm leading-relaxed">{project.description}</p>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -370,9 +384,12 @@ I'm a recent broadcasting graduate turning raw footage into stories that connect
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {audioProjects.map((project) => (
-            <div
-              key={project.title}
-              className="p-6 rounded-lg border transition-colors duration-300 flex items-start gap-4"
+            <a
+            key={project.title}
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-6 rounded-lg border transition-colors duration-300 flex items-start gap-4 hover:opacity-80"
               style={{
                 borderColor: isDark ? "hsl(0 0% 20%)" : "hsl(0 0% 85%)",
               }}
@@ -388,7 +405,7 @@ I'm a recent broadcasting graduate turning raw footage into stories that connect
                 <h3 className="text-xl font-bold mt-2 mb-2">{project.title}</h3>
                 <p className="text-neutral-500 text-sm leading-relaxed">{project.description}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -400,9 +417,12 @@ I'm a recent broadcasting graduate turning raw footage into stories that connect
         </h2>
         <div className="space-y-8">
           {articles.map((article) => (
-            <div
-              key={article.title}
-              className="pb-8 border-b flex items-start gap-4"
+            <a
+            key={article.title}
+            href={article.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pb-8 border-b flex items-start gap-4 hover:opacity-80"
               style={{
                 borderColor: isDark ? "hsl(0 0% 20%)" : "hsl(0 0% 85%)",
               }}
@@ -413,7 +433,7 @@ I'm a recent broadcasting graduate turning raw footage into stories that connect
                 <h3 className="text-xl font-bold mt-2 mb-2">{article.title}</h3>
                 <p className="text-neutral-500 text-sm leading-relaxed">{article.description}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
